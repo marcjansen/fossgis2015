@@ -26,7 +26,7 @@
             var link = document.createElement( 'link' );
             link.rel = 'stylesheet';
             link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 
+            link.href = window.location.search.match( /print-pdf/gi ) ?
                     '../shared-resources/reveal.js-3.0.0/css/print/pdf.css' :
                     '../shared-resources/reveal.js-3.0.0/css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
@@ -44,17 +44,24 @@
             <div class="slides">
                 <section>
                     <h1>GeoExt</h1>
-                    <h3>Ein ExtJS basiertes Rich-Client-WebGIS-Framework in 
+                    <h3>Ein ExtJS basiertes Rich-Client-WebGIS-Framework in
                     Zeiten von AngularJS und Konsorten</h3>
                     <p>
                         <small>Marc Jansen &amp; Christian Mayer</small>
                     </p>
                 </section>
+
+                <section>
+                    <div class="stretch">
+                        <iframe src="http://geoext.github.io/geoext2/" height="100%" width="100%"></iframe>
+                    </div>
+                </section>
+
             </div> <!-- End #slides -->
         </div> <!-- End .reveal -->
-            
 
-                
+
+
 
         <script src="../shared-resources/reveal.js-3.0.0/lib/js/head.min.js"></script>
         <script src="../shared-resources/reveal.js-3.0.0/js/reveal.js"></script>
