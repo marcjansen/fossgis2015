@@ -38,9 +38,13 @@
         <![endif]-->
         
         <link rel="stylesheet" type="text/css" href="../shared-resources/customized.css" />
+        
+        <link rel="stylesheet" href="../shared-resources/ol3/ol.css" type="text/css">
     </head>
 
     <body>
+
+<script src="../shared-resources/ol3/ol.js"></script>
 
         <div class="reveal">
 
@@ -209,25 +213,109 @@
                 <section>
                     <h1>Stand</h1>
                 </section>
-
+                
                 <section>
-                    <h2>OpenLayers 3</h2>
-                    <p>Fakten und Allgemeines</p>
+                    <h1>O<span class="force-lowercase">pen</span>L<span class="force-lowercase">ayers</span> 3</h1>
+                    <h3>Auf der FOSSGIS 2014 angekündigt</h3>
                 </section>
 
                 <section>
-                    <h2>Highlights</h2>
-                    <p></p>
+                    <h1>O<span class="force-lowercase">pen</span>L<span class="force-lowercase">ayers</span> 3&hellip;</h1>
+                    <h1 class="fragment">
+	                    <img src="../shared-resources/img/loudspeaker-flipped.png" class="plain pulse2" />
+	                    &hellip;ist da
+	                    <img src="../shared-resources/img/party.png" class="plain pulse2" />
+	                    <img src="../shared-resources/img/thumbs-up.png" class="plain pulse2" />
+                    </h1>
+                    <h1 class="fragment force-lowercase">v3.3.0, 03.03.2015</h1>
                 </section>
 
                 <section>
-                    <h2>Highlights</h2>
-                    <p></p>
+                    <h1 >O<span class="force-lowercase">pen</span>L<span class="force-lowercase">ayers</span></h1>
+                    <ul>
+                        <li>lange Historie</li>
+                        <li>v2.0.0: August 2006</li>
+                    </ul>
+                    <img src="../shared-resources/img/v2.0.0.png" />
+                    <ul>
+                        <li>sehr bekannt</li>
+                        <li>weit verbreitet</li>
+                    </ul>
                 </section>
 
                 <section>
-                    <h2>Highlights</h2>
-                    <p></p>
+                    <h1 >O<span class="force-lowercase">pen</span>L<span class="force-lowercase">ayers</span> 3</h1>
+                    <ul>
+                        <li>Komplettes rewrite-from-scratch</li>
+                        <li>Bis zur v3.0.0 ca. 2 Jahre Entwicklung</li>
+                        <li><a href="https://developers.google.com/closure/library/">Google Closure Bibliothek</a> (Gmail, Google Maps)</li>
+                        <li><a href="https://developers.google.com/closure/compiler/">Google Closure Compiler</a></li>
+                        <li><a href="http://usejsdoc.org/">jsdoc3</a></li>
+                        <li><a href="http://www.khronos.org/webgl/">WebGL</a></li>
+                        <li><em lang="en">Mobile first / from start</em></li>
+                        <li>Styling ausschlie&szlig;lich CSS</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Was kann man damit machen?</h1>
+                </section>
+
+                <section>
+                    <h2>Einfache interaktive Karten</h2>
+                    <input type="button" value="Zeigs mir" onclick="toogleMap(this, 'trivial-map');">
+                    <div class="stretch">
+                    
+                    <pre id="trivial-map-src" contenteditable><code class="small javascript" data-trim>  
+window.map = new ol.Map({
+  target: 'trivial-map',
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM()
+    })
+  ],
+  view: new ol.View({
+    center: ol.proj.transform([-93.27, 44.98], 'EPSG:4326', 'EPSG:3857'),
+    zoom: 9
+  })
+});
+                    </code></pre>
+                    <div id="trivial-map" class="stretch"></div>
+                    </div>
+                    <script>
+function toogleMap(btn, key) {
+    var preElem = document.querySelector('#' + key + '-src'),
+        targetElem = document.querySelector('#' + key),
+        oldBtnValue = btn.value,
+        src = document.querySelector('code', preElem).textContent;
+    // toggle visibility of pre and div
+    preElem.style.display='none';
+    targetElem.style.display='';
+    // change the btn
+    btn.value="Versteck Dich";
+    btn.onclick = function() {
+        // destroy the map
+        window.map.setTarget(null);
+        window.map = null;
+        // toggle visibility of pre and div
+        preElem.style.display='';
+        targetElem.innerHTML = null;
+        targetElem.style.display='none';
+        // change the btn back
+        btn.value = oldBtnValue;
+        btn.onclick = function(){
+            toogleMap(btn, key);
+        }
+    }
+    eval(src);
+}
+                    </script>
+                    
+                </section>
+                
+                <section>
+                    <h2>Komplexe Geoportale</h2>
+                    <iframe class="stretch" src="https://map.geo.admin.ch/?X=201060.00&Y=599200.00&zoom=5&lang=de&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&catalogNodes=457,458,485&layers_timestamp=18641231"></iframe>
                 </section>
 
                 <section>
