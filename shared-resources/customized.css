@@ -1,6 +1,18 @@
-table.authors tr.smaller td {
+table.authors-contact td {
+	text-align: center;
+}
+table.authors-contact tr.smaller td {
 	font-size: 75%;
 }
+table.authors-contact td img {
+	margin: 0;
+	width: 3em;
+	height: 3em;
+	max-width: none;
+	max-height: none;
+}
+
+
 .reveal section img.plain {
     background: none;
     border-width: 0;
@@ -12,11 +24,6 @@ table.authors tr.smaller td {
     border: 10px solid #fff;
     box-shadow: 0 0 10px 10px #fff;
     border-radius: 5px;
-}
-
-.reveal section h2 {
-    /* border-bottom: 1px inset #333; */
-    margin-bottom: 0.5em;
 }
 
 .reveal section p.subtle {
@@ -35,7 +42,7 @@ table.authors tr.smaller td {
 .reveal section div.part {
     margin: 5px;
     float: left;
-    width: 32%;
+    width: 48.9%;
 }
 
 .reveal section div.part .enumeration {
@@ -80,12 +87,10 @@ table.authors tr.smaller td {
 	float: left;
 	width: 33%
 }
-
-.reveal section #ie-evolution {
-	margin-top: 30px;
-	text-align: center;
+.reveal section.author img {
+	float: right;
+	width: 25%
 }
-.reveal section #ie-evolution div {
-    float: left;
-    width: 50%
+.reveal section.author ul {
+    max-width: 70%;
 }
