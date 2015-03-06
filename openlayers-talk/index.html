@@ -36,7 +36,7 @@
         <!--[if lt IE 9]>
         <script src="../shared-resources/reveal.js-3.0.0/lib/js/html5shiv.js"></script>
         <![endif]-->
-        
+
         <link rel="stylesheet" type="text/css" href="../shared-resources/customized.css" />
         
         <link rel="stylesheet" href="../shared-resources/ol3/ol.css" type="text/css">
@@ -208,7 +208,66 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="../shared-resources/img/mj.jpg" height="150"/>
+                        </div>
+                        <div class="part">
+                            <strong>Marc Jansen</strong><br />
+                            <small>terrestris GmbH &amp; Co. KG</small>
+                        </div>
+                        <div class="part">
+                            <a class="email" href="mailto:jansen@terrestris.de">jansen@terrestris.de</a>
+                            <a class="github" href="https://github.com/marcjansen/">@marcjansen</a>
+                            <a class="twitter" href="https://twitter.com/selectoid/">@selectoid</a>
+                        </div>
+                    </div> -->
+
+                    <!--
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="../shared-resources/img/ah.jpg" height="192" />
+                        </div>
+                        <div class="part">
+                            <strong>Andreas Hocevar</strong><br />
+                            <small>Boundless</small><br />
+                            <a class="email" href="ahocevar@boundlessgeo.com">ahocevar@boundlessgeo.com<br />
+                            <a class="github" href="https://github.com/ahocevar/">@ahocevar</a><br />
+                            <a class="twitter" href="https://twitter.com/ahoce/">@ahoce</a><br />
+                        </div>
+                    </div>
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="../shared-resources/img/ah.jpg" height="192" />
+                        </div>
+                        <div class="part">
+                            <strong>Andreas Hocevar</strong><br />
+                            <small>Boundless</small><br />
+                            <a class="email" href="ahocevar@boundlessgeo.com">ahocevar@boundlessgeo.com<br />
+                            <a class="github" href="https://github.com/ahocevar/">@ahocevar</a><br />
+                            <a class="twitter" href="https://twitter.com/ahoce/">@ahoce</a><br />
+                        </div>
+                    </div>
+                    </section>
+                     -->
+
+
+<!--                 <section id="about-author-ah">
+                    <h2>&Uuml;ber uns</h2>
+                    <h5>ol3-Kernentwickler</h5>
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="../shared-resources/img/ah.jpg" height="192" />
+                        </div>
+                        <div class="part">
+                            <strong>Andreas Hocevar</strong><br />
+                            <small>Boundless</small><br />
+                            <a class="email" href="ahocevar@boundlessgeo.com">ahocevar@boundlessgeo.com<br />
+                            <a class="github" href="https://github.com/ahocevar/">@ahocevar</a><br />
+                            <a class="twitter" href="https://twitter.com/ahoce/">@ahoce</a><br />
+                        </div>
+                    </div>
+                </section> -->
 
                 <section>
                     <h1>Stand</h1>
@@ -324,12 +383,61 @@ function toogleMap(btn, key) {
 
                 <section>
                     <h2>Änderungen von v3.3.0</h2>
-                    <p>TODO AH</p>
+                    <ul>
+                        <li>NEU: ArcGIS Rest Tile Layer</li>
+                        <li>autoPan von Overlays in den sichtbaren Bereich</li>
+                        <li>WMTS Verbesserungen</li>
+                        <li>Neue Events für Feature Selection</li>
+                        <li>Events zur Überwachung des Ladens von Kacheln</li>
+                    </ul>
                 </section>
 
                 <section>
-                    <h2>Neuere Beispiele</h2>
-                    <p>TODO AH</p>
+                  <div class="stretch">
+                      <iframe src="http://openlayers.org/en/v3.3.0/examples/arcgis-tiled.html" height="100%" width="100%"></iframe>
+                  </div>
+                </section>
+
+                <section>
+                  <div class="stretch">
+                      <iframe src="http://openlayers.org/en/v3.3.0/examples/popup.html" height="100%" width="100%"></iframe>
+                  </div>
+                </section>
+
+                <section>
+                  <div class="stretch">
+                      <iframe src="http://openlayers.org/en/v3.3.0/examples/arcgis-tiled.html" height="100%" width="100%"></iframe>
+                  </div>
+                </section>
+
+                <section>
+                  <pre><code class="hljs">// WMTS layer from GetCapabilities response
+
+$.ajax('data/wmts-capabilities.xml').then(function(data) {
+  map.addLayer(new ol.layer.Tile({
+    source: new ol.source.WMTS(
+        ol.source.WMTS.optionsFromCapabilities(
+            new ol.format.WMTSCapabilities().read(data),
+            {layer: 'layer-7328', matrixSet: 'EPSG:3857'}))
+  }));
+});</code></pre>
+                </section>
+
+                <section>
+                  <pre><code class="hljs">// Information about selected and deselected features
+
+selectInteraction.on('select', function(e) {
+  alert(selectInteraction.getFeatures().getLength() +
+      ' selected features (last operation selected ' +
+      e.selected.length + ' and deselected ' +
+      e.deselected.length + ' features)');
+});</code></pre>
+                </section>
+
+                <section>
+                  <div class="stretch">
+                      <iframe src="http://openlayers.org/en/v3.3.0/examples/tile-load-events.html" height="100%" width="100%"></iframe>
+                  </div>
                 </section>
 
                 <section>
