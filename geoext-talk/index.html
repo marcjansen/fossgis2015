@@ -35,6 +35,8 @@
         <!--[if lt IE 9]>
         <script src="../shared-resources/reveal.js-3.0.0/lib/js/html5shiv.js"></script>
         <![endif]-->
+        
+        <link rel="stylesheet" type="text/css" href="../shared-resources/customized.css" />
     </head>
 
     <body>
@@ -43,7 +45,8 @@
 
             <div class="slides">
                 <section>
-                    <h1>GeoExt</h1>
+                    <h1 class="force-natural-case">GeoExt</h1>
+                    <img src="../shared-resources/img/geoext-logo.png" class="plain" width=200>
                     <h3>Ein ExtJS basiertes Rich-Client-WebGIS-Framework in
                     Zeiten von AngularJS und Konsorten</h3>
                     <p>
@@ -62,39 +65,323 @@
                     </ul>
                 </section>
                                 
-                <section>
+                <section id="author-marc-jansen" class="author">
                     <h2>Marc Jansen</h2>
-                    <p>TODO MJ</p>
+                    <img src="../shared-resources/img/mj.jpg">
+                    <img src="../shared-resources/img/openlayers_de_1ed.png" class="plain" style="width: 15%">
+                    <ul>
+                        <li>Seit 2007 Entwickler / Projektleiter bei terrestris</li>
+                        <li>Kernentwickler und PSC Mitglied GeoExt</li>
+                        <li>Kernentwickler OpenLayers</li>
+                        <li>Buchautor "OpenLayers"</li>
+                        <li>OSGeo Foundation Charter Member</li>
+                    </ul>
                 </section>
                 
-                <section>
+                <section id="author-christian-mayer" class="author">
                     <h2>Christian Mayer</h2>
-                    <p>TODO CM</p>
+                    <img src="../shared-resources/img/cm.jpg">
+                    <ul>
+                        <li>Kernentwickler GeoExt</li>
+                        <li>OSGeo Foundation Charter Member</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>♥ ♥ ♥ OpenSource ♥ ♥ ♥</h2>
+                    <br />
+                    <hr />
+                    <br />
+                    <h2>♡ ♡ ♡ GIS / Spatial ♡ ♡ ♡</h2>
                 </section>
                 
-                <section>
-                    <h2>terrestris</h2>
-                    <p>TODO MJ</p>
-                </section>
+                <section id="about-company-terrestris">
+                    <h2 class="force-natural-case">terrestris</h2>
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="../shared-resources/img/terrestris-logo.png" class="plain contrast" width="192"/>
+                            <br /><br />
+                            <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
+                            <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
+                        </div>
+                        <div class="part">
+                            <div class="enumeration">
+                                <ul>
+                                    <li><a href="http://terrestris.de/">terrestris.de</a></li>
+                                    <li>OpenSource GIS aus Bonn</li>
+                                    <li>Entwicklung, Projekte &amp; Support/Schulung</li>
+                                    <li>Beratung, Planung, Implementierung & Wartung</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
                 
-                <section>
-                    <h2>Meggsimum</h2>
-                    <p>TODO CM</p>
-                </section>
+                <section id="about-company-meggsimum">
+                    <h2>meggsimum</h2>
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="../shared-resources/img/meggsimum-logo.png" class="plain contrast" width="192"/>
+                            <br /><br />
+                            <a class="github" href="https://github.com/chrismayer/">@chrismayer</a><br />
+                            <a class="twitter" href="https://twitter.com/meggsimum/">@meggsimum</a>
+                        </div>
+                        <div class="part">
+                            <div class="enumeration">
+                                <ul>
+                                    <li><a href="http://meggsimum.de/">http://meggsimum.de/</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
     
                 <section>
                     <h2>Über diesen Vortrag</h2>
-                    <p>TODO</p>
+                    <ul class="stretch" style="margin: 0 3em;">
+	                    <li>Kein <emph>Bashing</emph> <span class="nope">✗</span></li>
+	                    <li>Keine <emph>Flame-Wars</emph> <span class="nope">✗</span></li>
+	                    <li>Keine vollst. Neutralität <span class="nope">✗</span></li>
+	                    <li>Keine vollst. Entscheidungsgrundlage <span class="nope">✗</span></li>
+	                    <li>Überblick und Einschätzung <span class="ok">✓</span></li>
+                    </ul>
+                    
                 </section>
     
-                <section><h1>GeoExt &amp; ExtJS</h1></section>
+                <section><h1 class="force-natural-case">GeoExt &amp; ExtJS</h1></section>
+                
+                <section>
+                    <h2 class="force-natural-case">GeoExt</h2>
+                    <ul>
+                        <li>JavScript-Framework für "Rich Web Mapping Interfaces"</li>
+                        <li>Basierta auf OpenLayers und ExtJS</li>
+                        <li>Erweitert ExtJS um räumliche Komponenten</li>
+                        <li>Grafische Komponenten und Daten-Paket</li>
+                        <li>OpenSource, BSD, © OSGeo</li>
+                        <li>Sei März 2009 (6 Jahre)</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <iframe class="stretch" src="http://geoext.github.io/geoext2/examples/app/simple/simple.html?theme=gray"></iframe>
+                </section>
+                
+                <section>
+                    <h2>Aktuelle Version v2.0.2</h2>
+                    <ul>
+                        <li>ExtJS 4.2.x</li>
+                        <li>OpenLayers 2.13.1</li>
+                    </ul>
+                    <p>&hellip;</p>
+                </section>
+                
+                <section>
+                    <h2>&hellip;sehr bald</h2>
+                    <ul>
+                        <li>v2.0.3</li>
+                        <li>letztes für nur ExtJS 4.2.x</li>
+                    </ul>
+                    <p>&hellip;</p>
+                </section>
+                
+                <section>
+                    <h2>&hellip;bald</h2>
+                    <ul>
+                        <li>v2.1.0</li>
+                        <li>ExtJS 4.2.x &amp; 5.1.x</li>
+                    </ul>
+                    <p>&hellip;</p>
+                </section>
+                
+                <section>
+                    <h2>&hellip; später</h2>
+                    <ul>
+                        <li>v3 ?</li>
+                        <li>5.1.x</li>
+                        <li>OpenLayers 3<li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Ext JS als Basis</h2>
+                    <ul>
+                        <li>legt Komponentenstruktur fest</li>
+                        <li>empfiehlt und belohnt Patterns
+                            <ul>
+	                            <li>MVC</li>
+	                            <li>MVVM</li>
+                            </ul>
+                        </li>
+                        <li>Konsistentes Layout</li>
+                        <li>Empfohlener Build-Prozess</li>
+                        <li>Smartphones nicht offiziell unterstützt</li>
+                        <li>relativ seltene Major updates<li>
+                        <li>Zielgruppe Applikation</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Führt zu &hellip;</h2>
+                    <ul>
+                        <li>weniger Flexibilität
+                            <ul>
+                                <li>Code</li>
+                                <li>Patterns</li>
+                                <li>Build</li>
+                            </ul>
+                        </li>
+                        <li>eingeschränkte Wiederverwertbarkeit mit non-ExtJS</li>
+                        <li>Weniger Hype</li>
+                        <li>Coole und konsistente Layouts Handarbeit</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Aber auch zu</h2>
+                    <ul>
+                        <li>hohe Code-Qualität interner Komponenten</li>
+                        <li>Leichte Einarbeitung (fremde ExtJS App)</li>
+                        <li>Leichte Einarbeitung (non-JS Entwickler)</li>
+                        <li>hohe Verlässlichkeit (API)</li>
+                        <li>Alternative builds möglich</li>
+                        <li>hohe Wiederverwertbarkeit innerhalb ExtJS</li>
+                        <li>reine businesslogik externalisierbar</li>
+                        <li>Out-of-the-box Lösungen</li>
+                        <li>Konzentration auf Lösungen statt Hypes</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Weitere ExtJS Eigenschaften</h2>
+                    <ul>
+                        <li>Herrausragende Dokumentation</li>
+                        <li>Plugins / Erweiterungen
+                            <ul>
+                                <li>DeftJS, http://deftjs.org/</li>
+                                <li>GeoExt ☺</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li>Enterprise Support via Sencha etc.</li>
+                    <li>Wenige Überraschungen</li>
+                </section>
                 
                 <section><h1>Vgl. zu Angular &amp; Co.</h1></section>
                 
+                <section>
+                    <h2>Eine willkürliche Auswahl</h2>
+                    <ul>
+                        <li>AngularJS</li>
+                        <li>Ember</li>
+                        <li>Knockout</li>
+                        <li>Backbone</li>
+                        <li>&hellip;</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Gemeinsamkeiten</h2>
+                    <ul>
+                        <li>Jung &amp; Beliebt</li>
+                        <li>kurze Release Zyklen</li>
+                        <li>MV-Whatever</li>
+                        <li>Routing</li>
+                        <li>Templating</li>
+                        <li>'Be nice to others'</li>
+                        <li>Works everywhere</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Eigenschaften</h2>
+                    <ul>
+                        <li>Spezifischer Fokus, kein 'All-singing-all-dancing'</li>
+                        <li>Build ist oft nicht festgelegt</li>
+                        <li>API-Design oft ansprechend</li>
+                        <li>Einheitlichkeit nicht immer gewährt</li>
+                        <li>Google statt out-of-the box?</li>
+                        <li>Üblicherweise hohe Wiederverwendbarkeit von eigenen Klassen</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <img class="stretch" src="../shared-resources/img/ppk-angular.png">
+                    <p><a href="http://www.quirksmode.org/blog/archives/2015/01/the_problem_wit.html">PPK: The problem with Angular</a></p>
+                </section>
+                
+                <section>
+                    <h2>Und wie entscheide ich mich?</h2>
+                    <ul>
+                        <li>Projektanforderungen</li>
+                        <li>Projektteamgegebenheiten</li>
+                    </ul>
+                </section>
+
+                <section>
+	                <h2>Geoext profitiert von Weiterentwicklungen bei Ext</h2>
+                </section>
+
                 <section><h1>GeoExt 2.1 und GeoExt 3</h1></section>
+                
+                <section>
+                    <h2>GeoExt 2.1</h2>
+                    <ul>
+                        <li>ExtJS 5</li>
+                        <li><code>responsive</code></li>
+                        <li>Two-way Binding</li>
+                        <li>MVC + MVVM</li>
+                        <li>Erleichtertest Styling</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>GeoExt 3</h2>
+                    <ul>
+                        <li>OpenLayers 3</li>
+                        <li>ExtJS 5.current</li>
+                    </ul>
+                </section>
                 
                 <section><h1>Fazit</h1></section>
                 
+                <section>
+                    <h2>Haben andere Bibliotheken ein GeoExt-Äquivalent?</h2>
+                    <ul>
+                        <li><a href='https://github.com/camptocamp/ngeo'>camptocamp/ngeo</a></li>
+                        <li><a href="http://boundlessgeo.com/2014/02/openlayers-3-ember/">Boundless EmberJS &amp; OpenLayers 3</a></li>
+                        <li>???</li>
+                    </ul>
+                    <p>Unterschiede existieren &amp; sind gewollt,<br />nivellieren sich zudem</p>
+                    <p class="fragment">Für Geo-Web-Applikation<br />ist GeoExt eine hervorragende Wahl</p>
+                </section>
+                
+                <section id="thanks-questions">
+                    <h4>Vielen Dank</h4>
+                    <hr />
+                    <h1 style="font-size:3.0em">Fragen & Anmerkungen?</h1>
+                    <hr />
+                    <p class="subtle">
+                        <a href="#/imprint">Impressum</a>
+                    </p>
+                </section>
+
+                <section id="imprint">
+                    <h3>Impressum</h3>
+                    <ul>
+                        <li>Autoren:
+                            <ul>
+                                <li>Marc Jansen, terrestris GmbH &amp; Co. KG, <a href="mailto:jansen@terrestris.de">jansen@terrestris.de</a></li>
+                                <li>Christian Mayer, <a href="mailto:chris@meggsimum.de">chris@meggsimum.de</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            Lizenz: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+                        </li>
+                        <li>
+                            <a href="http://github.com/marcjansen/fossgis2015">Vortragsfolien</a>
+                        </li>
+                    </ul>
+                </section>
                 
                 <!-- 
                 <section>

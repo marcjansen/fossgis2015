@@ -12,6 +12,26 @@ table.authors-contact td img {
 	max-height: none;
 }
 
+span.ok,
+span.nope {
+	font-weight: bold;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	text-shadow: 0 0 7px #ccc;
+}
+span.ok {
+	color: darkgreen;
+}
+span.nope {
+    font-weight: bold;
+    color: darkred;
+}
+
+.reveal section .force-natural-case {
+	text-transform: none;
+}
+
 
 .reveal section img.plain {
     background: none;
@@ -179,6 +199,7 @@ table.authors-contact td img {
 }
 .reveal section.author img {
 	float: right;
+	clear: right;
 	width: 25%
 }
 .reveal section.author ul {
