@@ -197,7 +197,8 @@ span.nope {
 	float: left;
 	width: 33%
 }
-.reveal section.author img {
+.reveal section.author img,
+.reveal section img.sideimage {
 	float: right;
 	clear: right;
 	width: 25%
