@@ -136,6 +136,13 @@ span.nope {
     border-radius: 5px;
 }
 
+.reveal section img.contrast-black {
+    background-color: #000;
+    border: 10px solid #000;
+    box-shadow: 0 0 10px 10px #000;
+    border-radius: 5px;
+}
+
 .reveal section p.subtle {
     margin-top: 5em;
 }
@@ -197,7 +204,8 @@ span.nope {
 	float: left;
 	width: 33%
 }
-.reveal section.author img {
+.reveal section.author img,
+.reveal section img.sideimage {
 	float: right;
 	clear: right;
 	width: 25%
