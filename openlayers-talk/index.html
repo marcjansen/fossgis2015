@@ -171,44 +171,48 @@
                 </section>
 
                 <section id="about-company-terrestris">
-                    <h2 class="force-natural-case">terrestris</h2>
-                    <div class="split-info">
-                        <div class="part">
-                            <img src="../shared-resources/img/terrestris-logo.png" class="plain contrast" width="192"/>
-                            <br /><br />
-                            <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
-                            <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
-                        </div>
-                        <div class="part">
-                            <div class="enumeration">
-                                <ul>
-                                    <li><a href="http://terrestris.de/">terrestris.de</a></li>
-                                    <li>OpenSource GIS aus Bonn</li>
-                                    <li>Entwicklung, Projekte &amp; Support/Schulung</li>
-                                    <li>Beratung, Planung, Implementierung & Wartung</li>
-                                </ul>
+                    <div class="print-wrap" style="height: 500px;">
+                        <h2 class="force-natural-case">terrestris</h2>
+                        <div class="split-info">
+                            <div class="part">
+                                <img src="../shared-resources/img/terrestris-logo.png" class="plain contrast" width="192"/>
+                                <br /><br />
+                                <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
+                                <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
+                            </div>
+                            <div class="part">
+                                <div class="enumeration">
+                                    <ul>
+                                        <li><a href="http://terrestris.de/">terrestris.de</a></li>
+                                        <li>OpenSource GIS aus Bonn</li>
+                                        <li>Entwicklung, Projekte &amp; Support/Schulung</li>
+                                        <li>Beratung, Planung, Implementierung & Wartung</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                  </section>
 
                  <section id="about-company-boundless">
-                    <h2 class="force-natural-case">Boundless</h2>
-                    <div class="split-info">
-                        <div class="part">
-                            <img src="../shared-resources/img/boundless-logo.png" class="plain contrast" width="192" />
-                            <br /><br />
-                            <a class="github" href="https://github.com/boundlessgeo/">@boundlessgeo</a><br />
-                            <a class="twitter" href="https://twitter.com/boundlessgeo/">@boundlessgeo</a>
-                        </div>
-                        <div class="part">
-                            <div class="enumeration">
-                              <ul>
-                                <li><a href="http://boundlessgeo.com/">boundlessgeo.com</a></li>
-                                <li>Boundless reduziert die Kosten freier Software</li>
-                                <li>Governance in der FOSSGIS Community</li>
-                                <li>Vorher bekannt als OpenGeo</p>
-                              </ul>
+                    <div class="print-wrap" style="height: 500px;">
+                        <h2 class="force-natural-case">Boundless</h2>
+                        <div class="split-info">
+                            <div class="part">
+                                <img src="../shared-resources/img/boundless-logo.png" class="plain contrast" width="192" />
+                                <br /><br />
+                                <a class="github" href="https://github.com/boundlessgeo/">@boundlessgeo</a><br />
+                                <a class="twitter" href="https://twitter.com/boundlessgeo/">@boundlessgeo</a>
+                            </div>
+                            <div class="part">
+                                <div class="enumeration">
+                                  <ul>
+                                    <li><a href="http://boundlessgeo.com/">boundlessgeo.com</a></li>
+                                    <li>Boundless reduziert die Kosten freier Software</li>
+                                    <li>Governance in der FOSSGIS Community</li>
+                                    <li>Vorher bekannt als OpenGeo</p>
+                                  </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -318,8 +322,12 @@ function toogleMap(btn, key) {
                 </section>
 
                 <section>
-                    <h2>Komplexe Geoportale</h2>
-                    <iframe class="stretch" src="https://map.geo.admin.ch/?X=201060.00&Y=599200.00&zoom=5&lang=de&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&catalogNodes=457,458,485&layers_timestamp=18641231"></iframe>
+                     <h2>Komplexe Geoportale</h2>
+                     <img class="print-only stretch" style="margin: 0 auto;" width="50%" src="../shared-resources/img/swisstopo-geoportal.png"  />
+                     <div class="stretch no-print">
+                        <iframe src="https://map.geo.admin.ch/?X=201060.00&Y=599200.00&zoom=5&lang=de&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&catalogNodes=457,458,485&layers_timestamp=18641231" height="100%" width="100%"></iframe>
+                     </div>
+                     <a href="https://map.geo.admin.ch/?X=201060.00&Y=599200.00&zoom=5&lang=de&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&catalogNodes=457,458,485&layers_timestamp=18641231">Geoportal der swisstopo</a>
                 </section>
 
                 <section>
@@ -338,15 +346,21 @@ function toogleMap(btn, key) {
                 </section>
 
                 <section>
-                  <div class="stretch">
-                      <iframe src="http://openlayers.org/en/v3.3.0/examples/arcgis-tiled.html" height="100%" width="100%"></iframe>
-                  </div>
+                    <h2>ArcGIS Rest Tile Layer</h2>
+                    <img class="print-only" style="margin: 0 auto;" width="60%" src="../shared-resources/img/arcgis-rest.png" />
+                    <div class="stretch no-print">
+                        <iframe src="http://openlayers.org/en/v3.3.0/examples/arcgis-tiled.html" height="100%" width="100%"></iframe>
+                    </div>
+                    <a href="http://openlayers.org/en/v3.3.0/examples/arcgis-tiled.html">http://openlayers.org/en/v3.3.0/examples/arcgis-tiled.html</a>
                 </section>
 
                 <section>
-                  <div class="stretch">
-                      <iframe src="http://openlayers.org/en/v3.3.0/examples/popup.html" height="100%" width="100%"></iframe>
-                  </div>
+                    <h2>autoPan von Overlays</h2>
+                    <img class="print-only" style="margin: 0 auto;" width="60%" src="../shared-resources/img/autopan.png" />
+                    <div class="stretch no-print">
+                        <iframe src="http://openlayers.org/en/v3.3.0/examples/popup.html" height="100%" width="100%"></iframe>
+                    </div>
+                    <a href="http://openlayers.org/en/v3.3.0/examples/popup.html">http://openlayers.org/en/v3.3.0/examples/popup.html</a>
                 </section>
 
                 <section>
@@ -374,9 +388,12 @@ selectInteraction.on('select', function(e) {
                 </section>
 
                 <section>
-                  <div class="stretch">
+                  <h2>Kachelladezustand</h2>
+                  <img class="print-only" style="margin: 0 auto;" width="50%" src="../shared-resources/img/tileload.png" />
+                  <div class="stretch no-print">
                       <iframe src="http://openlayers.org/en/v3.3.0/examples/tile-load-events.html" height="100%" width="100%"></iframe>
                   </div>
+                  <a href="http://openlayers.org/en/v3.3.0/examples/tile-load-events.html">http://openlayers.org/en/v3.3.0/examples/tile-load-events.html</a>
                 </section>
 
                 <section>
@@ -387,15 +404,20 @@ selectInteraction.on('select', function(e) {
                 </section>
 
                 <section>
-                    <div class="stretch">
+                    <h2>Echtes 3D mit OL3-Cesium</h2>
+                    <img class="print-only" style="margin: 0 auto;" width="50%" src="../shared-resources/img/ol3-cesium.png" />
+                    <div class="stretch no-print">
                         <iframe src="http://openlayers.org/ol3-cesium/" height="100%" width="100%"></iframe>
                     </div>
+                    <a href="http://openlayers.org/ol3-cesium/">http://openlayers.org/ol3-cesium/</a>
                 </section>
 
                 <section>
-                    <div class="stretch">
+                    <img class="print-only" style="margin: 0 auto;" width="50%" src="../shared-resources/img/ol3-cesium-example.png" />
+                    <div class="stretch no-print">
                         <iframe src="http://ahocevar.net/ol3-cesium-demo/" height="100%" width="100%"></iframe>
                     </div>
+                    <a href="http://ahocevar.net/ol3-cesium-demo/">http://ahocevar.net/ol3-cesium-demo/</a>
                 </section>
 
                 <section>

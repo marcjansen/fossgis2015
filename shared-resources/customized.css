@@ -128,6 +128,23 @@ span.nope {
 
 }
 
+@media all {
+    .print-only {
+        display: none;
+    }
+    .no-print {
+        display: inherit;
+    }
+}
+
+@media print {
+	.print-only {
+	    display: inherit !important;
+	}
+	.no-print {
+	    display: none;
+	}
+}
 
 .reveal section img.contrast {
     background-color: #fff;
